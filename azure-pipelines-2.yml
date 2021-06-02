@@ -19,6 +19,6 @@ steps:
     resourceGroupName: 'NewShradhaRG'
     location: 'Central US'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/ShradhaJ30/StorageAccDeploy-repo/master/CreateWebApp/StorageAccount2.json'
+    csmFileLink: 'https://github.com/ShradhaJ30/StorageAccDeploy-repo/blob/master/CreateWebApp/StorageAccount2.json'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineTemplate'
