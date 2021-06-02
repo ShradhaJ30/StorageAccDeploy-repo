@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "storageAccountsName":  {
-            "defaultValue": "[concat('store', uniqueString(resourceGroup().id))]",
+            "defaultValue": "[concat('strgaccshra', uniqueString(resourceGroup().id))]",
             "type": "String"
         }
     },
