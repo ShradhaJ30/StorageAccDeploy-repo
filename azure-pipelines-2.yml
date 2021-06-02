@@ -1,0 +1,24 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'Shradha_Service'
+    subscriptionId: '7822d954-8181-41e7-8829-9b74641b60ad'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'NewShradhaRG'
+    location: 'Central US'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/ShradhaJ30/StorageAccDeploy-repo/master/CreateWebApp/StorageAccount2.json'
+    deploymentMode: 'Incremental'
+    deploymentName: 'DeployPipelineTemplate'
